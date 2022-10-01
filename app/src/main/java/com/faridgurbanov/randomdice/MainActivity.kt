@@ -14,28 +14,16 @@ class MainActivity : AppCompatActivity() {
         binding.dice.setImageResource(R.drawable.dicee)
 
         binding.button.setOnClickListener {
-            var randomnum = (1..6).random()
+            val randomnum = (1..6).random()
 
-
-            // Use when -- it's good choice
-            if (randomnum == 1) {
-                binding.dice.setImageResource(R.drawable.dice1)
-            } else if (randomnum == 2) {
-                binding.dice.setImageResource(R.drawable.dice2)
-            } else if (randomnum == 3) {
-                binding.dice.setImageResource(R.drawable.dice3)
-            } else if (randomnum == 4) {
-                binding.dice.setImageResource(R.drawable.dice4)
-            } else if (randomnum == 5) {
-                binding.dice.setImageResource(R.drawable.dice5)
-            } else if (randomnum == 6) {
-                binding.dice.setImageResource(R.drawable.dice6)
+            when (randomnum) {
+                1 -> binding.dice.setImageResource(R.drawable.dice1)
+                2 -> binding.dice.setImageResource(R.drawable.dice2)
+                3 -> binding.dice.setImageResource(R.drawable.dice3)
+                4 -> binding.dice.setImageResource(R.drawable.dice4)
+                5 -> binding.dice.setImageResource(R.drawable.dice5)
+                6 -> binding.dice.setImageResource(R.drawable.dice6)
             }
-
         }
-
-
     }
-
-
 }
